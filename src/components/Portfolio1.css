@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Literata:ital,opsz,wght@1,7..72,200&family=Noto+Sans+JP:wght@100;300;400;500&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400&family=Tiro+Devanagari+Marathi&display=swap');
+
+
+.root {
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 0.5rem;
+
+}
+
+.card-container {
+  margin-top: 1rem;
+  width: 330px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  transition: 0.5s;
+  animation: ease-in;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.card-container:hover {
+  transform: scale(1.03, 1.03);
+  box-shadow: 1px 2px 15px 0.5px;
+}
+
+.image-container img {
+  align-items: center;
+  box-shadow: 1px 1px 6px 0px;
+  margin-top: 1rem;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.card-content {
+  margin: 1rem 1rem;
+  margin-bottom: 0.5rem;
+  text-align: justify;
+
+}
+
+h3, p {
+  /* Resetting default value */
+  font-size: 30px;
+  margin-top: -10px;
+  padding: 0;
+  color:rgb(193, 195, 199);
+}
+
+h4, p {
+  /* Resetting default value */
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  /* color:rgb(43, 47, 49);  */
+  color: rgb(110, 109, 110);
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color:aqua;
+}
+
+.card-body {
+  /* background-color:rgb(213, 225, 226); */
+  background-color:rgb(209, 225, 238);
+  margin-bottom: 0.7rem;
+  margin-top: 1.5rem;
+  text-align: justify;
+}
+
+.card-btn {
+  color:white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+  padding-top: 0.1rem;
+  font-size: 20px;
+  /* background-color: rgb(36, 95, 195); */
+  background-color: rgb(241, 44, 159);
+  /* background-color: rgba(252, 157, 3, 0.863); */
+  margin-bottom: 0.5rem;
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  /* transition: 0.4s; */
+  border-radius: 6px; 
+  opacity: 0.5;
+}
+
+.card-btn:hover { 
+  width: 100%;
+  font-size: 24px;
+  transition: 0.4s ease-in-out;
+  opacity: 1;
+}
+
+
+/*
+.card-btn button:hover {
+  color: black;
+  font-size: 20px;
+  background-color: rgb(201, 241, 44);
+}
+
+
+.card-btn button {
+  padding: 0.5rem;
+  padding-top: 0.4rem;
+  font-size: large;
+  color: white;
+  background-color: transparent;
+  border: #000000;
+  margin-bottom: 0.5rem;
+  transition: 0.4s;
+  border-radius: 6px;
+}
+*/
+
+a {
+  text-transform: uppercase;
+  color: #1B9CFC;
+  text-decoration: none;
+  font-weight: bold;
+}

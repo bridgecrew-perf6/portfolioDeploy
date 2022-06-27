@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Literata:ital,opsz,wght@1,7..72,200&family=Noto+Sans+JP:wght@100;300;400;500&family=Poppins:wght@100;200;300&family=Roboto:wght@100;300;400&family=Tiro+Devanagari+Marathi&display=swap');
+
+:root {
+    /*   border radius */
+    --radius: 0.2rem;
+
+    /*   color variables */
+    --clr-primary: #0e48fe;
+    --clr-primary-hover: #29e6a7;
+    --clr-primary-dark: #039d69;
+    --clr-gray100: #f9fbff;
+    --clr-gray150: #f4f6fb;
+    --clr-gray200: #eef1f6;
+    --clr-gray300: #e1e5ee;
+    --clr-gray400: #767b91;
+    --clr-gray500: #4f546c;
+    --clr-gray600: #2a324b;
+    --clr-gray700: #161d34;
+
+    /* Samuel define */
+    --clr-blue300: #c2cfef;
+    --clr-blue500: #5a83ec;
+    --clr-yellow300: #fdf442;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", "Noto Sans", sans-serif;
+  /* color: var(--clr-gray500); */
+  color: var(--clr-gray400);
+  align-items: center;
+}
+
+
+.wrapper {
+  margin: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+/* below is the wrapper h1 which is very effective */
+.wrapper h1 {
+  align-items: center;
+  justify-items: center;
+  margin-left:20%;
+  color: rgb(102, 123, 147);
+}
+
+.card {
+  box-shadow: 0 0 10px 5px var(--clr-blue300);
+  border-radius: var(--radius);
+  min-width: 28rem;
+  display: flex;
+
+  &__img {
+    width: 14rem;
+    height: 11rem;
+    object-fit: cover;
+
+  }
+
+  &__body {
+    margin: 1rem;
+    flex-grow: 1;
+  }
+  &__title {
+    line-height: 2.4rem;
+    margin-bottom: 0.5rem;
+    color: rgb(43, 150, 232);
+  }
+  &__description {
+    line-height: 1.4rem;
+    color: rgb(151, 146, 146);
+  }
+  &__price {
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
+    
+
+    &::before {
+      content: "$";
+      font-size: 1rem;
+      position: relative;
+      top: -0.3rem;
+      padding-right: 0.1rem;
+    }
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(10, 139, 225);
+    font-family: inherit;
+    color: rgb(254, 253, 253);
+    font-size: 2rem;
+    font-weight: bold;
+    /* color: inherit; */
+    width: 100%;
+    padding: 12px 20px;
+    padding-top: 1rem;
+    margin-bottom: auto;
+    cursor: pointer;
+    box-shadow: 5px 6px 5px -2px rgb(93, 93, 93);
+
+    &:hover {
+      /* color: var(--clr-primary); */
+      color: rgb(236, 232, 38);
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .wrapper {
+    /* I make the adjustment on minmax(12rem, 14rem) */
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 22rem));
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    min-width: 14rem;
+    border-radius: 3%;
+
+    &__img {
+      width: 100%;
+      height: 12rem;
+      border-radius: 3%;
+    }
+  }
+}

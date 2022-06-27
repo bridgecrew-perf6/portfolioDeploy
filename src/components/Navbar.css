@@ -1,0 +1,100 @@
+.header {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in;
+    overflow: hidden;
+    background-color:  rgba(5, 155, 254, 0.9);
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.header .nav-menu a {
+    color: #ffffff;
+}
+
+.header .navbar img {
+    width: 250px;
+    height: auto;
+}
+
+.header .nav-menu {
+    display: flex;
+
+}
+
+.header .nav-item {
+    font-size: 26px;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.header .nav-item a:hover {
+    padding-bottom: 100%;
+    padding-top: 100%;  
+    font-weight: bold;
+    color: rgb(55, 55, 46);
+    background-color: yellow;
+     /* border-bottom: 3px solid var(--secondary-color); */
+}
+
+.menu-button {
+    display: none;
+}
+
+
+@media screen and (max-width:940px) {
+    .header {
+        max-width: 100%;
+        background-color: rgba(5, 155, 254, 0.9);
+    }
+
+    .header .navbar {
+        max-width: 100%;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        /* if want the menu fly from left to right use -> right: -100%; */
+        left : -100%;
+
+        top: 90px;
+        flex-direction: column;
+        background-color: rgba(0,0,0,.9);
+        width: 100%;
+        height: 90vh;
+        z-index: 999;
+        text-align: center;
+        transition: .5s;   /* set the slow motion of the fly menu */
+        opacity: 0.88;      /* set the flying menu not complete black but opactity 80% */
+    }
+
+    .nav-menu.active {
+        /* if want the menu fly from left to right use -> right: 0;  */
+        left: 0px; 
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .header .navbar img {
+        width: 150px;
+    }
+}
+
